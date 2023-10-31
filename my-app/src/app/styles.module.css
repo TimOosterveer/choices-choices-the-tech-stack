@@ -1,0 +1,481 @@
+.h1 {
+  font-size: 2.3rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.imagetext1 p {
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+.imagetext1 {
+  position: absolute;
+  left: 1em;
+  z-index: 1;
+  border-radius: 5px;
+  inset: 0;
+  margin: auto;
+  height: max-content;
+  width: 22rem;
+  text-align: left;
+  color: var(--main-offwhite);
+  background-color: var(--color-primair);
+  padding: 1em;
+  transform: translateY(70%);
+}
+
+.carousel {
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 9vh;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  height: 90vh;
+}
+
+.slides img {
+  width: 38rem;
+  height: 135vh;
+  object-fit: cover;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slidesitem {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 400px;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.5s;
+  width: 120%;
+  scroll-snap-align: start;
+}
+
+/* MEDIA QUERY TABLET*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h1 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .imagetext1 p {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    line-height: 2rem;
+  }
+
+  .imagetext1 {
+    top: -30%;
+    width: 45rem;
+  }
+
+  .slides img {
+    width: 50rem;
+  }
+
+  .slidesitem {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERY DESKTOP*/
+@media (min-width: 1024px) {
+  .carousel {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-top: 10vh;
+  }
+
+  .overlay {
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.194);
+    z-index: 5;
+  }
+
+  .h1 {
+    font-size: var(--title-size);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .imagetext1 p {
+    font-size: var(--sec-title-size);
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+    /* padding-left: 0.5rem; */
+    line-height: 2rem;
+  }
+
+  .imagetext1 {
+    position: absolute;
+    left: 2em;
+    bottom: 2em;
+    margin: 0;
+    height: max-content;
+    width: 40rem;
+    inset: 0;
+    margin: auto;
+    height: max-content;
+    width: 30%;
+    transform: translateX(-65%);
+    background-color: var(--color-primair);
+    padding: 2em;
+    border-radius: 1em;
+  }
+
+  .slides img {
+    width: 150rem;
+    height: 100%;
+  }
+
+  .slidesitem {
+    width: 130%;
+    height: 40rem;
+  }
+}
+
+/* ------------ SECTION HOW IT WORKS ------------*/
+.h2 {
+  font-size: 30px;
+}
+
+.flextitelhowitworks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.flextitelhowitworks svg {
+  width: 1rem;
+  margin-top: 0.4rem;
+}
+
+.howitworks p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin-left: 3.5rem;
+  max-width: 18rem;
+}
+
+/* MEDIA QUERY TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h2 {
+    font-size: 50px;
+  }
+
+  .flextitelhowitworks {
+    margin-top: 5rem;
+  }
+
+  .flextitelhowitworks svg {
+    width: 3rem;
+    margin-top: 1.2rem;
+  }
+
+  .howitworks p {
+    font-size: 25px;
+    line-height: 2rem;
+    margin-left: 5.5rem;
+    max-width: 38rem;
+  }
+}
+
+/* MEDIA QUERY DESKTOP*/
+@media (min-width: 1024px) {
+  .h2 {
+    font-size: var(--title-size);
+  }
+
+  .flextitelhowitworks {
+    margin-top: 8rem;
+    margin-left: 10rem;
+  }
+
+  .flextitelhowitworks svg {
+    width: 5rem;
+    margin-top: 0.5rem;
+  }
+
+  .howitworks p {
+    font-size: var(--sec-title-size);
+    line-height: 2rem;
+    margin-left: 16rem;
+    max-width: 50rem;
+  }
+}
+
+/* ------------ SECTION AVAILABLE STEKJES ------------*/
+.h3 {
+  font-size: 30px;
+}
+
+.flextitelavailablestekjes {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  padding-top: 3rem;
+}
+
+.flextitelavailablestekjes svg {
+  width: 1rem;
+  margin-top: 0.4rem;
+}
+
+.availablestekjes p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin-left: 3.5rem;
+  max-width: 18rem;
+}
+
+.containerrecentstekjes {
+  margin-top: 2.5rem;
+}
+
+.flexwrapperrecentstekjes {
+  display: flex;
+  margin-left: 3.5rem;
+  gap: 2rem;
+  overflow-x: scroll;
+  width: 80vw;
+}
+
+.flexwrapperrecentstekjes img {
+  width: 15rem;
+  border-radius: 5px;
+}
+
+.buttonallstekjes {
+  border: none;
+  padding: 0.2em 1em 0.5em;
+  background-color: var(--color-secundair);
+  /* border: 1px solid var(--color-primair); */
+  color: var(--main-dark);
+  border-radius: 2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  width: max-content;
+  margin: 3em 3.5em 0;
+  margin-bottom: 0;
+}
+
+.buttonallstekjes:hover {
+  background-color: var(--color-primair);
+  color: white;
+  stroke: var(--main-dark);
+  /* border: 1px solid var(--color-secundair); */
+}
+
+.svgbutton {
+  transition: 0.3s;
+  transform: translateY(5px) scale(0.8);
+  stroke: var(--main-dark);
+}
+
+.buttonallstekjes:hover .svgbutton {
+  transform: translateX(5px) translateY(5px) scale(0.8);
+  /* fill: var(--main-offwhite); */
+  stroke: white;
+}
+
+/* MEDIA QUERY TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h3 {
+    font-size: 50px;
+  }
+
+  .flextitelavailablestekjes svg {
+    width: 3rem;
+    margin-top: 1.2rem;
+  }
+
+  .availablestekjes p {
+    font-size: 25px;
+    line-height: 2rem;
+    margin-left: 5.5rem;
+    max-width: 38rem;
+  }
+
+  .flexwrapperrecentstekjes {
+    margin-left: 5.5rem;
+  }
+
+  .flexwrapperrecentstekjes img {
+    width: 25rem;
+  }
+
+  .buttonallstekjes {
+    font-size: 1.5em;
+  }
+}
+
+/* MEDIA QUERY DESKTOP*/
+@media (min-width: 1024px) {
+  .h3 {
+    font-size: var(--title-size);
+  }
+
+  .availablestekjes {
+    background-color: #f0f0f0;
+    height: 48rem;
+  }
+
+  .flextitelavailablestekjes svg {
+    width: 5rem;
+    margin-top: 0.6rem;
+  }
+
+  .flextitelavailablestekjes {
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+
+  .availablestekjes p {
+    font-size: var(--sec-title-size);
+    line-height: 2rem;
+    margin-left: 16rem;
+    max-width: 50rem;
+  }
+
+  .flexwrapperrecentstekjes {
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-left: 5.5rem;
+    overflow-x: hidden;
+  }
+
+  .flexwrapperrecentstekjes img {
+    width: 18rem;
+  }
+
+  .buttonallstekjes {
+    font-size: 1em;
+    margin-left: 15.5rem;
+  }
+}
+
+/* ------------ SECTION ABOUT BUURTCAMPUS OOST ------------*/
+.abouthomepage {
+  margin-bottom: 4rem;
+}
+
+.h4 {
+  font-size: 30px;
+}
+
+.flextitleabout {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.flextitleabout svg {
+  width: 1rem;
+  margin-top: 0.4rem;
+}
+
+.abouthomepage p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin-left: 3.5rem;
+  max-width: 18rem;
+}
+
+.imageabout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageabout img {
+  width: 20rem;
+  padding-top: 2rem;
+}
+
+/* MEDIA QUERY TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h4 {
+    font-size: 50px;
+  }
+
+  .flextitleabout svg {
+    width: 3rem;
+    margin-top: 1.2rem;
+  }
+
+  .abouthomepage p {
+    font-size: 25px;
+    line-height: 2rem;
+    margin-left: 5.5rem;
+    max-width: 38rem;
+  }
+
+  .imageabout img {
+    width: 40rem;
+    padding-top: 4rem;
+  }
+}
+
+/* MEDIA QUERY DESKTOP */
+@media (min-width: 1024px) {
+  .h4 {
+    font-size: var(--title-size);
+  }
+
+  .abouthomepage {
+    margin-bottom: 10rem;
+  }
+
+  .flextitleabout svg {
+    width: 5rem;
+    margin-top: 0.6rem;
+  }
+
+  .flextitleabout {
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+
+  .abouthomepage p {
+    font-size: var(--sec-title-size);
+    line-height: 2rem;
+    margin-left: 16rem;
+    max-width: 50rem;
+  }
+
+  .imageabout img {
+    display: none;
+  }
+}
